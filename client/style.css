@@ -1,0 +1,83 @@
+.container {
+	Width: 275px;
+	border-radius: 5%;
+	padding: 5px 15px 0px 15px;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: darkslategray;
+	color: white;
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+#input-email {
+	text-align: center;
+	padding: 10px 5px;
+	width: 200px;
+	margin: 15px 0px;
+	background-color: white;
+}
+
+#input-password {
+	text-align: center;
+	padding: 10px 5px;
+	width: 200px;
+	margin: 15px 0px;
+	background-color: white;
+}
+
+#login-button {
+	padding: 10px 5px;
+	width: 210px;
+	margin: 10px 0px 15px 0px;
+}
+
+.login-footer {
+	padding: 5px;
+	line-height: 30px;
+}
+
+.footer-link:link {
+    margin: 5px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.footer-link:active {
+    color: lightblue;
+}
+
+.footer-link:visited {
+    color: white;
+}
+
+.footer-link:hover {
+    color: indianred;
+}
+
+.form-control {
+	text-align: center;
+	padding: 10px 5px;
+	width: 200px;
+	margin: 15px 0px;
+	background-color: white;
+}
+
+.logout-button {
+	margin: 15px 0px;
+	padding: 10px 15px;
+	width: 270px;
+	font-size: 20px;
+	border-radius: 5%;
+	background-color: lightgreen;
+}
+
+.logout-button:hover {
+	background-color: lightsalmon;
+}
+
+.list-group {
+	margin: 0 auto;
+	text-align: left;
+}

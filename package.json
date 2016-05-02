@@ -1,0 +1,27 @@
+{
+  "name": "costco-run",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OdieD8/costco-run.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OdieD8/costco-run/issues"
+  },
+  "homepage": "https://github.com/OdieD8/costco-run#readme",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "cors": "^2.7.1",
+    "express": "^4.13.4",
+    "firebase": "^2.4.2",
+    "mongoose": "^4.4.12"
+  }
+}
