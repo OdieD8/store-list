@@ -8,14 +8,19 @@
 					<select class="form-control input-lg" id="category" ng-model="dropDown" ng-change="addItem()" placeholder="">
 					  <option>Select Category</option>
 					  <option value="Bakery">Bakery</option>
+					  <option value="Baking">Baking Needs &amp; Bakeware</option>
 					  <option value="Canned Goods">Canned Goods</option>
 					  <option value="Dairy">Dairy</option>
 					  <option value="Drinks">Drinks</option>
 					  <option value="Frozen">Frozen</option>
 					  <option value="Fruit/Vegetables">Fruit/Vegetables</option>
 				      <option value="Grains">Grains</option>
+					  <option value="Hardware">Hardware</option>
+					  <option value="Home Goods">Home Goods</option>
 					  <option value="Meat">Meat</option>
+					  <option value="For Odie Use Only">For Odie Use Only</option>
 					  <option value="Paper/CleaningProds">Paper/Cleaning Products</option>
+					  <option value="Pharmacy">Pharmacy</option>
 					  <option value="Snacks/Chips/Candy">Snacks/Chips/Candy</option>
 					  <option value="Other">Other</option>
 					</select>
@@ -26,6 +31,17 @@
             <h3>BAKERY</h3>
             <div class="list-group">
                 <div ng-repeat="item in bakery track by $index" class="list-group-item">
+                    <div class="view">
+                        <button class="btn btn-warning pull-right" ng-click="removeItem(item)">X</button>
+                        <label class="item-list">{{item.title}}<br></label><br>
+                    </div>
+                </div>
+            </div>
+        </section>
+		<section ng-hide="baking.length === 0">
+            <h3>BAKING NEEDS &amp; BAKEWARE</h3>
+            <div class="list-group">
+                <div ng-repeat="item in baking track by $index" class="list-group-item">
                     <div class="view">
                         <button class="btn btn-warning pull-right" ng-click="removeItem(item)">X</button>
                         <label class="item-list">{{item.title}}<br></label><br>
@@ -99,6 +115,28 @@
                 </div>
             </div>
         </section>
+		<section ng-hide="hardware.length === 0">
+            <h3>HARDWARE</h3>
+            <div class="list-group">
+                <div ng-repeat="item in hardware track by $index" class="list-group-item">
+                    <div class="view">
+                        <button class="btn btn-warning pull-right" ng-click="removeItem(item)">X</button>
+                        <label class="item-list">{{item.title}}<br></label><br>
+                    </div>
+                </div>
+            </div>
+        </section>
+		<section ng-hide="homeGoods.length === 0">
+            <h3>HOME GOODS</h3>
+            <div class="list-group">
+                <div ng-repeat="item in homeGoods track by $index" class="list-group-item">
+                    <div class="view">
+                        <button class="btn btn-warning pull-right" ng-click="removeItem(item)">X</button>
+                        <label class="item-list">{{item.title}}<br></label><br>
+                    </div>
+                </div>
+            </div>
+        </section>
 		<section ng-hide="meat.length === 0">
             <h3>MEAT</h3>
             <div class="list-group">
@@ -121,6 +159,17 @@
                 </div>
             </div>
         </section>
+		<section ng-hide="pharmacy.length === 0">
+            <h3>PHARMACY</h3>
+            <div class="list-group">
+                <div ng-repeat="item in pharmacy track by $index" class="list-group-item">
+                    <div class="view">
+                        <button class="btn btn-warning pull-right" ng-click="removeItem(item)">X</button>
+                        <label class="item-list">{{item.title}}<br></label><br>
+                    </div>
+                </div>
+            </div>
+        </section>
 		<section ng-hide="snacksChipsCandy.length === 0">
             <h3>SNACKS/CHIPS/CANDY</h3>
             <div class="list-group">
@@ -136,6 +185,17 @@
             <h3>OTHER</h3>
             <div class="list-group">
                 <div ng-repeat="item in other track by $index" class="list-group-item">
+                    <div class="view">
+                        <button class="btn btn-warning pull-right" ng-click="removeItem(item)">X</button>
+                        <label class="item-list">{{item.title}}<br></label><br>
+                    </div>
+                </div>
+            </div>
+        </section>
+		<section ng-hide="forOdie.length === 0">
+            <h3 style="color:blue">FOR ODIE USE ONLY</h3>
+            <div class="list-group">
+                <div ng-repeat="item in forOdie track by $index" class="list-group-item">
                     <div class="view">
                         <button class="btn btn-warning pull-right" ng-click="removeItem(item)">X</button>
                         <label class="item-list">{{item.title}}<br></label><br>
