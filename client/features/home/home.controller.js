@@ -5,6 +5,7 @@ angular.module("app").controller("homeController", function ($scope, $firebaseOb
   var bakery = new Firebase("https://store-list.firebaseio.com/Bakery");
   var baking = new Firebase("https://store-list.firebaseio.com/Baking");
   var cannedGoods = new Firebase("https://store-list.firebaseio.com/CannedGoods");
+  var cooking = new Firebase("https://store-list.firebaseio.com/Cooking")
   var dairy = new Firebase("https://store-list.firebaseio.com/Dairy")
   var drinks = new Firebase("https://store-list.firebaseio.com/Drinks");
   var frozen = new Firebase("https://store-list.firebaseio.com/Frozen");
@@ -29,6 +30,7 @@ angular.module("app").controller("homeController", function ($scope, $firebaseOb
   $scope.bakery = $firebaseArray(bakery);
   $scope.baking = $firebaseArray(baking);
   $scope.cannedGoods = $firebaseArray(cannedGoods);
+  $scope.cooking = $firebaseArray(cooking);
   $scope.dairy = $firebaseArray(dairy);
   $scope.drinks = $firebaseArray(drinks);
   $scope.frozen = $firebaseArray(frozen);
@@ -83,6 +85,16 @@ angular.module("app").controller("homeController", function ($scope, $firebaseOb
 
         title: newItem,
         category: "canned goods",
+        completed: false
+      });
+    }
+
+    if ($scope.dropDown === "Cooking") {
+
+      $scope.cooking.$add({
+
+        title: newItem,
+        category: "cooking",
         completed: false
       });
     }
@@ -244,6 +256,11 @@ angular.module("app").controller("homeController", function ($scope, $firebaseOb
     if (item.category === "canned goods") {
 
       $scope.cannedGoods.$remove(item);
+    }
+
+    if (item.category === "cooking") {
+
+      $scope.cooking.$remove(item);
     }
 
     if (item.category === "dairy") {

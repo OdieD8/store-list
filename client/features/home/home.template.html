@@ -10,6 +10,7 @@
 					  <option value="Bakery">Bakery</option>
 					  <option value="Baking">Baking Needs &amp; Bakeware</option>
 					  <option value="Canned Goods">Canned Goods</option>
+                      <option value="Cooking">Cooking Needs &amp; Cookware</option>
 					  <option value="Dairy">Dairy</option>
 					  <option value="Drinks">Drinks</option>
 					  <option value="Frozen">Frozen</option>
@@ -53,6 +54,17 @@
             <h3>CANNED GOODS</h3>
             <div class="list-group">
                 <div ng-repeat="item in cannedGoods track by $index" class="list-group-item">
+                    <div class="view">
+                        <button class="btn btn-warning pull-right" ng-click="removeItem(item)">X</button>
+                        <label class="item-list">{{item.title}}<br></label><br>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section ng-hide="cooking.length === 0">
+            <h3>COOKING NEEDS &amp; COOKWARE</h3>
+            <div class="list-group">
+                <div ng-repeat="item in cooking track by $index" class="list-group-item">
                     <div class="view">
                         <button class="btn btn-warning pull-right" ng-click="removeItem(item)">X</button>
                         <label class="item-list">{{item.title}}<br></label><br>
